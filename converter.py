@@ -70,9 +70,3 @@ class Converter:
 
             # Close the file
             file.close()
-
-
-convert = Converter()
-convert.convert_img_to_text(
-    "C:/Users/UCAR/Desktop/Fast-img-To-text-converter-With_AI/screenshots/1.png"
-)
