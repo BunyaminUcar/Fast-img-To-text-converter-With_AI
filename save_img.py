@@ -1,25 +1,33 @@
+import os
 import keyboard
 from PIL import ImageGrab
 from datetime import datetime
 import time
-import win32clipboard
+
+import pyperclip
+from converter import Converter
+
+convert = Converter()
 
 
 # shift+win+s kombinasyonu için callback fonksiyonu
 def take_screenshot():
-    time.sleep(2)
+    time.sleep(3)
     # Ekran görüntüsünü al
     img = ImageGrab.grabclipboard()
     # Ekran görüntüsü alınmışsa kaydet
     if img:
         now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         filename = f"screenshot_{now}.png"
-        img.save(filename)
-        print(f"Screenshot saved as {filename}")
+        foldername = "screenshots"
+        filepath = os.path.join(foldername, filename)
+        img.save(filepath)
+        print(f"Screenshot saved as {filepath}")
         # Windows panosunu boşalt
-        win32clipboard.OpenClipboard()
-        win32clipboard.EmptyClipboard()
-        win32clipboard.CloseClipboard()
+
+        convert.convert_img_to_text(
+            f"C:/Users/UCAR/Desktop/Fast-img-To-text-converter-With_AI/screenshots/{filename}"
+        )
 
 
 # shift+win+s kombinasyonu için hotkey tanımla
