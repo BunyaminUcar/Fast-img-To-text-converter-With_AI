@@ -59,7 +59,7 @@ class Converter:
             cropped = im2[y : y + h, x : x + w]
 
             # Open the file in append mode
-            file = open("recognized.txt", "a")
+            file = open("result.txt", "a")
 
             # Apply OCR on the cropped image
             text = pytesseract.image_to_string(cropped)
@@ -73,4 +73,6 @@ class Converter:
 
 
 convert = Converter()
-convert.convert_img_to_text("C:/Users/UCAR/Desktop/10.12.png")
+convert.convert_img_to_text(
+    "C:/Users/UCAR/Desktop/Fast-img-To-text-converter-With_AI/screenshots/1.png"
+)
