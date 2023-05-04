@@ -3,8 +3,6 @@ import keyboard
 from PIL import ImageGrab
 from datetime import datetime
 import time
-
-import pyperclip
 from converter import Converter
 
 convert = Converter()
