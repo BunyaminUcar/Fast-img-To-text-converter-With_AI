@@ -11,3 +11,5 @@ Tesseract OCR is open source software used for text recognition (OCR) operations
 3. If you have downloaded the setup file for Windows, double-click it to install it and follow the instructions. If you downloaded a package file for Linux, for example, you can install it using the command "sudo apt-get install tesseract-ocr" for Ubuntu.
 4. Run the "tesseract" command in the command prompt to verify that the Tesseract OCR is installed correctly. This should show the current version of Tesseract OCR and instructions for use.
 5. You are ready to use Tesseract OCR.
+
+Note:After installing Tesseract OCR you need to change the default location in the __init__ method in the converter.py file
