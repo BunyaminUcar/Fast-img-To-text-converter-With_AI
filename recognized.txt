@@ -1,0 +1,11 @@
+# shiftewints kombinasyonu için callback fonksiyonu
+def take screenshot():
+
+time.sleep(3)
+
+# Ekran görüntüsünü al
+
+img - ImageGrab.grabclipboard()
+
+# Ekran görüntüsü alınmışsa kaydet
+
